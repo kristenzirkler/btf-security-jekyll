@@ -1,0 +1,15 @@
+url: 'btf-security-jekyll'
+baseurl: 'https://kristenzirkler.github.com/btf-security-static'
+title: 'BTF Security'
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
+
+exclude:
+  - package.json
+  - postcss.config.js
+  - tailwind.config.js
+  - yarn.lock
