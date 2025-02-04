@@ -1,0 +1,13 @@
+---
+layout: default
+title: "Happy coding"
+---
+
+{% assign solutions = site.solutions | sort: "sort-order" %}
+<div class="client-work">
+{% for solution in solutions limit: 16 %}
+  <div class="item">
+    {{ solution.title }}
+  </div>
+{% endfor %}
+</div>

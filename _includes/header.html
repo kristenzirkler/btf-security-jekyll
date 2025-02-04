@@ -1,0 +1,113 @@
+<header>
+  Header
+</header>
+<hr class="my-4">
+
+
+
+<header class="bg-black"
+  x-data="{ isSolutionsNavOpen: false }">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8 relative" aria-label="Global">
+    <div class="absolute top-0 left-4 w-24 md:w-32 lg:w-40 z-20 bg-black px-1 py-2 rounded-xl overflow-hidden">
+      <a href="/" class="text-center">
+        <span class="sr-only">{{ site.title }}</span>
+        <span class="">LOGO class: 'm-auto w-16 md:w-20 lg:w-24'</span>
+      </a>
+    </div>
+    <div class="flex lg:flex-1">
+      <a href="/" class="-m-1.5 p-1.5 pl-4">
+        <span class="sr-only">{{ site.title }}</span>
+        <span class="visually-hidden">
+          LOGO class: 'w-24 md:w-32 lg:w-40 h-0'
+        </span>
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200" 
+        aria-label="Main menu"
+        x-on:click.prevent="isMobileNavOpen = !isMobileNavOpen"
+        x-bind:aria-label="isMobileNavOpen ? 'Close main menu' : 'Main menu'"
+        x-bind:aria-expanded="isMobileNavOpen">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-8">
+      <a href="/" class="text-sm/6 font-semibold text-gray-100">Home</a>
+
+      <div class="relative">
+        <button type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-100" aria-expanded="false" x-on:click.prevent="isSolutionsNavOpen = !isSolutionsNavOpen">
+          Solutions
+          {{ icon({icon: 'chevron-down', class: 'size-5 flex-none text-gray-400'}) }}
+        </button>
+        <div class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-sm overflow-hidden rounded-lg bg-black shadow-lg ring-1 ring-gray-100/5" 
+          x-show="isSolutionsNavOpen"
+            x-transition:enter="transition-opacity ease-linear duration-100"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition-opacity ease-linear duration-100"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            x-cloak>
+          {% for solution in collections.solution | sort(false, false, "data.title") %}
+            <div class="group relative rounded-lg px-6 py-2 text-sm hover:bg-gray-800"><a class="block text-gray-100" href="{{ solution.url }}">{{ solution.data.title }}</a></div>
+          {% endfor %}
+        </div>
+      </div>
+      <a href="/about" class="text-sm/6 font-semibold text-gray-200 hover:text-white">About Us</a>
+      <a href="/contact" class="text-sm/6 font-semibold text-gray-200 hover:text-white">Contact Us</a>
+    </div>
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <div>
+        <a class="text-gray-200 hover:text-white flex items-center justify-start gap-2" href="tel:{{ site.company_phone }}">
+          {{ icon({icon: 'phone', class: 'inline-block size-4 text-blue-700'}) }}
+          <span class="text-center text-2xl text-gray-200">{{ site.company_phone }}</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="lg:hidden" role="dialog" aria-modal="true" x-show="isMobileNavOpen"
+             x-transition:enter="transition-opacity ease-linear duration-100"
+             x-transition:enter-start="opacity-0"
+             x-transition:enter-end="opacity-100"
+             x-transition:leave="transition-opacity ease-linear duration-100"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0"
+             x-cloak>
+    <div class="fixed inset-0 z-10 opacity-40 bg-black" x-show="isMobileNavOpen" x-on:click.prevent="isMobileNavOpen = !isMobileNavOpen"></div>
+    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+      <div class="flex items-center justify-between">
+        <a href="/" class="-m-1.5 p-1.5">
+          <span class="sr-only">{{ site.title }}</span>
+          <span class="">{{ btfLogo({class: 'w-10'}) }}</span><span class="hidden">{{ btfIcon({class: 'w-10'}) }}</span>
+        </a>
+        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-200"
+            x-on:click.prevent="isMobileNavOpen = !isMobileNavOpen">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6">
+            <a href="/" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-100 hover:bg-gray-800">Home</a>
+            <div class="-mx-3">
+              <div class="px-3 py-2 text-base/7 font-semibold text-gray-100">Solutions</div>
+              <div class="mt-2">
+                {% for solution in collections.solution | sort(false, false, "data.title") %}
+                  <a href="{{ solution.url }}" class="block rounded-lg py-1 pl-6 pr-3 text-sm/7 text-gray-100 hover:bg-gray-800">{{ solution.data.title }}</a>
+                {% endfor %}
+              </div>
+            </div>
+            <a href="/about" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-100 hover:bg-gray-800">About Us</a>
+            <a href="/contact" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-100 hover:bg-gray-800">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
