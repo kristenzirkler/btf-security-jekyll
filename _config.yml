@@ -1,13 +1,13 @@
 url: 'btf-security-jekyll'
 baseurl: 'https://kristenzirkler.github.com/btf-security-static'
 title: 'BTF Security'
-description: 'meta description'
 livereload: true
 
 plugins:
-  - jekyll-postcss
+  - jekyll-postcss-v2
 
 postcss:
+  script: node_modules/.bin/postcss
   cache: false
 
 exclude:

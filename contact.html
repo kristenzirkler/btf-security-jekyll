@@ -1,0 +1,43 @@
+---
+layout: default
+title: Contact
+---
+{% include hero.html
+  image = 'hero-pexels-ketchumcommunity-1464230.jpg' 
+  heading = 'Contact Us'
+  subtext = 'Have a question or would like to learn more?'
+%}
+
+<div class="hidden">Photo by Rosemary Ketchum: https://www.pexels.com/photo/man-wearing-black-officer-uniform-1464230/</div>
+
+<div class="relative">
+  <div class="mx-auto max-w-5xl px-6 pt-28 grid grid-cols-2 gap-20">
+    <div>
+      <h2 class="max-w-2xl text-balance text-4xl font-semibold tracking-tight text-gray-900">Please reach out to us through our contact form, email, or directly via phone.</h2>
+
+      <div class="mt-12">
+        <div class="flex justify-start mb-6">
+          <span class="w-10">{% include icon.html icon="phone" class="inline-block size-6 text-blue-700" %}</span>
+          <span class="text-xl"><a href="tel:{{ site.data.sitewide.company_phone }}">{{ site.data.sitewide.company_phone }}</a></span>
+        </div>
+        <div class="flex justify-start mb-6">
+          <span class="w-10">{% include icon.html icon="email" class="inline-block size-6 text-blue-700" %}</span>
+          <span class="text-xl"><a href="mailto:{{ site.data.sitewide.company_email }}">{{ site.data.sitewide.company_email }}</a></span>
+        </div>
+        <div class="flex justify-start mb-6">
+          <span class="w-10">{% include icon.html icon="building" class="inline-block size-6 text-blue-700" %}</span>
+          <span class="text-xl">{% include company_address.html %}</span>
+        </div>
+      </div>
+    </div>
+
+    {% include contact_form.html %}
+    
+  </div>
+  <div class="mx-auto max-w-5xl px-6 py-28">
+    <div class="space-y-8">
+      <div class="text-pretty text-lg text-gray-500 sm:text-xl/8">BTF Security Consulting is your strategic partner in security, offering a comprehensive suite of consultation and protective services to address all your security needs with professionalism and expertise. Whether you require security assessments, emergency management support, or protective solutions, our team is dedicated to delivering top-notch security solutions that prioritize your safety and security.</div>
+      <div class="text-2xl font-semibold tracking-tight text-gray-900">Contact us today to discover how BTF Security Consulting can enhance your security strategy and provide you with the peace of mind you deserve in uncertain times.</div>
+    </div>
+  </div>
+</div>

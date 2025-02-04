@@ -1,2 +1,66 @@
-<hr class="my-4">
-<div class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</div>
+<div class="border-t border-gray-200">
+  <div class="mx-auto max-w-5xl px-6 py-12 flex items-center justify-between">
+    <img src="{{ site.baseurl }}/assets/images/seal-samgov.png" alt="SAM.gov" class="w-28" />
+    <img src="{{ site.baseurl }}/assets/images/seal-veteran-owned.png" alt="Veteran Owned Business" class="w-28" />
+    <img src="{{ site.baseurl }}/assets/images/seal-gsa.png" alt="GSA" class="w-28" />
+    <img src="{{ site.baseurl }}/assets/images/seal-vosb.png" alt="Veteran Owned Business" class="w-28" />
+    <img src="{{ site.baseurl }}/assets/images/seal-asis.png" alt="NRA" class="w-28" />
+    <img src="{{ site.baseurl }}/assets/images/seal-nra.png" alt="NRA" class="w-28" />
+  </div>
+</div>
+
+<footer class="bg-black">
+  <div class="mx-auto max-w-7xl px-6 pb-8 pt-8 lg:px-8">
+    <div class="pb-4">
+    	{% include btficon.html class="w-20" %}
+    </div>
+    <div class="lg:grid lg:grid-cols-4 lg:gap-8">
+      <div class="space-y-2">
+        <div class="text-lg font-bold text-gray-100">{{ site.data.sitewide.title }}</div>
+        <div class="text-balance text-sm/6 text-gray-300">{{ site.data.sitewide.description }}</div>
+        <div class="pt-6">
+          <div class="flex justify-start mb-2">
+            <div class="w-8">{% include icon.html icon="phone" class="inline-block size-4 text-blue-700" %}</div>
+            <div class="text-sm text-gray-300"><a href="tel:{{ site.company_phone }}">{{ site.data.sitewide.company_phone }}</a></div>
+          </div>
+          <div class="flex justify-start mb-2">
+            <div class="w-8">{% include icon.html icon="email" class="inline-block size-4 text-blue-700" %}</div>
+            <div class="text-sm text-gray-300"><a href="mailto:{{ site.company_email }}">{{ site.data.sitewide.company_email }}</a></div>
+          </div>
+          <div class="flex justify-start mb-2">
+            <div class="w-8">{% include icon.html icon="building" class="inline-block size-4 text-blue-700" %}</div>
+            <div class="text-sm text-gray-300">{% include company_address.html %}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 gap-8 lg:mt-0 lg:col-span-3">
+        <ul role="list" class="space-y-4">
+          <li>
+            <a href="{{ site.baseurl }}/" class="text-sm/6 font-semibold text-gray-200 hover:text-white">Home</a>
+          </li>
+          <li>
+            <a href="{{ site.baseurl }}/about" class="text-sm/6 font-semibold text-gray-200 hover:text-white">About BTF Security Consultants</a>
+          </li>
+          <li>
+            <a href="{{ site.baseurl }}/contact" class="text-sm/6 font-semibold text-gray-200 hover:text-white">Contact Us</a>
+          </li>
+        </ul>
+        <hr class="my-4 border-gray-800" />
+        <h3 class="text-sm/6 font-semibold text-white">Our Solutions</h3>
+        <ul role="list" class="mt-4 space-y-2 columns-2 block">
+        {% for solution in solutions %}
+          <li>
+            <a href="{{ site.baseurl }}{{ solution.url }}" class="text-sm/6 text-gray-300 hover:text-white">{{ solution.title }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+
+
+    </div>
+    <div class="mt-16 border-t border-white/30 pt-4 sm:mt-20">
+      <p class="text-sm/6 text-gray-400">&copy; 2025 {{ site.title }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

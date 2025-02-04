@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
+  {% assign version = 1 %}
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
+    <title>{{ page.title }} - {{ site.data.sitewide.title }}</title>
     <meta name="description" content="
       {% if description %}
         {{ description }}
       {% else %}
-        {{ site.description }}
+        {{ site.data.sitewide.description }}
       {% endif %}
     "/>
 
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +23,8 @@
         font-family: "Public Sans", sans-serif;
       }
     </style>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
   </head>
   <body x-data="{ isMobileNavOpen: false }"
     :class="{ 'overflow-hidden': isMobileNavOpen }">

@@ -1,0 +1,37 @@
+<div class="form">
+  <form action="https://api.staticforms.xyz/submit" method="post" id="staticform">
+    <!-- Replace with your StaticForms accessKey -->
+    <input type="hidden" name="accessKey" value="80071f7e-0ea2-4acb-8b66-2668990d73d6">
+    <input type="hidden" name="subject" value="Contact from BTF Website">
+    <!-- Replace with the url you want to redirect to -->
+    <input type="hidden" name="redirectTo" value="https://www.google.com">
+    <div class="space-y-4">
+
+      <div>
+        <label for="email" class="block m-0 text-gray-900">Name</label>
+        <div class="grid grid-cols-1">
+          <input type="text" name="name" id="name" class="col-start-1 row-start-1 block w-full rounded-md bg-white py-1.5 pl-10 pr-3 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-700 sm:pl-9 sm:text-sm/6" placeholder="Your name">
+          {% include icon.html icon="user" class="pointer-events-none col-start-1 row-start-1 ml-3 size-5 self-center text-gray-400 sm:size-4" %}
+        </div>
+      </div>
+
+      <div>
+        <label for="email" class="block m-0 text-gray-900">Email</label>
+        <div class="grid grid-cols-1">
+          <input type="email" name="email" id="email" class="col-start-1 row-start-1 block w-full rounded-md bg-white py-1.5 pl-10 pr-3 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-700 sm:pl-9 sm:text-sm/6" placeholder="you@example.com">
+          {% include icon.html icon="email" class="pointer-events-none col-start-1 row-start-1 ml-3 size-5 self-center text-gray-400 sm:size-4" %}
+        </div>
+      </div>
+
+      <div>
+        <label for="message" class="block text-gray-900">Add your message</label>
+        <div class="">
+          <textarea rows="4" name="message" id="message" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-700 sm:text-sm/6"></textarea>
+        </div>
+      </div>
+
+      <button class="block w-full text-center rounded-md bg-blue-700 px-3.5 py-2.5 font-bold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700" type="Submit">Send</button>
+
+    </div>
+  </form>
+</div>

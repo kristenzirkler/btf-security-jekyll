@@ -1,0 +1,19 @@
+{% assign sharedclasses = 'min-w-48 rounded-md px-4 py-4 font-bold text-center border-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2' %}
+{% if include.reverse %}
+  {% case include.type %}
+  {% when 'secondary' %}
+    {% assign sharedclasses = sharedclasses | append: ' border-white text-white hover:border-gray-200' %}
+  {% else %}
+    {% assign sharedclasses = sharedclasses | append: ' border-white bg-white text-blue-700 hover:bg-gray-200 hover:border-gray-200 focus-visible:outline-white' %}
+  {% endcase %}
+{% else %}
+  {% case include.type %}
+  {% when 'secondary' %}
+    {% assign sharedclasses = sharedclasses | append: ' border-blue-700 text-blue-700 hover:border-blue-600' %}
+  {% else %}
+    {% assign sharedclasses = sharedclasses | append: ' border-blue-800 bg-blue-800 text-white hover:bg-blue-700 hover:border-blue-700 focus-visible:outline-blue-700' %}
+  {% endcase %}
+{% endif %}
+<div class="button">
+  <a href="{{ include.link }}" class="{{ include.class }} {{ sharedclasses }}">{{ include.text }}</a>
+</div>
