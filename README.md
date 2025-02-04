@@ -1,6 +1,17 @@
 # BTF Security
 ## kristenzirkler
 
+
+## NOTE:
+## NOTE:
+## NOTE: Tailwind does not automatically compile to Github Pages. 
+If classes are added to local, copy \_site/assets/css/main.css to /assets/css/main-compiled.css
+
+## NOTE:
+## NOTE:
+## NOTE:
+
+
 ## To Work on Site Locally
 
 * in terminal, navigate to the repo directory.
