@@ -23,7 +23,7 @@ http://stackoverflow.com/questions/14322329/site-root-github-pages-vs-jekyll-ser
  
  Then, run the local server (the baseurl option is empty on purpose): 
 
- `jekyll serve --watch --baseurl=''`
+ `bundle exec jekyll serve --watch --baseurl=''
 
 * Formspree contact form is so  easy. http://formspree.io/ 
 * Favicon Cheatsheet: https://github.com/audreyr/favicon-cheat-sheet
