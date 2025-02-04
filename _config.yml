@@ -1,5 +1,5 @@
-url: 'btf-security-jekyll'
-baseurl: 'https://kristenzirkler.github.io/btf-security-jekyll'
+url: 'https://kristenzirkler.github.io'
+baseurl: '/btf-security-jekyll'
 title: 'BTF Security'
 livereload: true
 
