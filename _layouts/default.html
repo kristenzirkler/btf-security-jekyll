@@ -7,7 +7,7 @@
     <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.data.sitewide.description }}{% endif %}"/>
 
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
   </head>
   <body x-data="{ isMobileNavOpen: false }"
     :class="{ 'overflow-hidden': isMobileNavOpen }">
-    KZ-master 3
+    KZ-master 4
     {% include header.html %}
     
     <main>
