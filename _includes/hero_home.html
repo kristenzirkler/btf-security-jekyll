@@ -17,18 +17,18 @@
           <h1 class="max-w-4xl text-balance font-bold tracking-tight text-white text-2xl sm:text-5xl">{{ include.heading }}</h1>
 
           <div class="max-w-md pt-12 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
-            {% assign link = site.baseurl | append: '/contact' %}
+            {% assign contactlink = site.baseurl | append: '/contact' %}
             {% assign phonetext = "Call " | append: include.phone %}
             {% assign phonelink = "tel:" | append: include.phone %}
 
             {% include button.html
-                text = "Contact Us" 
-                link = link 
+                text = "Contact Us"
+                link = "/contact" 
                 class = "block"
             %}
             {% include button.html
                 text = phonetext 
-                link = phonelink 
+                link = "/contact" 
                 type = "secondary" 
                 reverse = true 
                 class = "block"
