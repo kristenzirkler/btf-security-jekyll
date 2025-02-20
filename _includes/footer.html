@@ -1,11 +1,11 @@
 <div class="border-t border-gray-200">
-  <div class="mx-auto max-w-5xl px-6 py-12 flex items-center justify-between">
-    <img src="{{ site.baseurl }}/assets/images/seal-samgov.png" alt="SAM.gov" class="w-28" />
-    <img src="{{ site.baseurl }}/assets/images/seal-veteran-owned.png" alt="Veteran Owned Business" class="w-28" />
-    <img src="{{ site.baseurl }}/assets/images/seal-gsa.png" alt="GSA" class="w-28" />
-    <img src="{{ site.baseurl }}/assets/images/seal-vosb.png" alt="Veteran Owned Business" class="w-28" />
-    <img src="{{ site.baseurl }}/assets/images/seal-asis.png" alt="NRA" class="w-28" />
-    <img src="{{ site.baseurl }}/assets/images/seal-nra.png" alt="NRA" class="w-28" />
+  <div class="mx-auto max-w-5xl px-6 py-12 flex items-center justify-between flex-wrap">
+    <img src="{{ site.baseurl }}/assets/images/seal-samgov.png" alt="SAM.gov" class="w-28 m-2" />
+    <img src="{{ site.baseurl }}/assets/images/seal-veteran-owned.png" alt="Veteran Owned Business" class="w-28 m-2" />
+    <img src="{{ site.baseurl }}/assets/images/seal-gsa.png" alt="GSA" class="w-28 m-2" />
+    <img src="{{ site.baseurl }}/assets/images/seal-vosb.png" alt="Veteran Owned Business" class="w-28 m-2" />
+    <img src="{{ site.baseurl }}/assets/images/seal-asis.png" alt="NRA" class="w-28 m-2" />
+    <img src="{{ site.baseurl }}/assets/images/seal-nra.png" alt="NRA" class="w-28 m-2" />
   </div>
 </div>
 
@@ -48,7 +48,7 @@
         </ul>
         <hr class="my-4 border-gray-800" />
         <h3 class="text-sm/6 font-semibold text-white">Our Solutions</h3>
-        <ul role="list" class="mt-4 space-y-2 columns-2 block">
+        <ul role="list" class="mt-4 space-y-2 sm:columns-2 block">
         {% for solution in solutions %}
           <li>
             <a href="{{ site.baseurl }}{{ solution.url }}" class="text-sm/6 text-gray-300 hover:text-white">{{ solution.title }}</a>
@@ -60,7 +60,7 @@
 
     </div>
     <div class="mt-16 border-t border-white/30 pt-4 sm:mt-20">
-      <p class="text-sm/6 text-gray-400">&copy; 2025 {{ site.title }}. All rights reserved.</p>
+      <p class="text-sm/6 text-gray-400">&copy; {{ site.title }}. All rights reserved.</p>
     </div>
   </div>
 </footer>

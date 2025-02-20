@@ -3,8 +3,10 @@
     <!-- Replace with your StaticForms accessKey -->
     <input type="hidden" name="accessKey" value="80071f7e-0ea2-4acb-8b66-2668990d73d6">
     <input type="hidden" name="subject" value="Contact from BTF Website">
-    <!-- Replace with the url you want to redirect to -->
-    <input type="hidden" name="redirectTo" value="https://www.google.com">
+
+    <input type="hidden" name="replyTo" value="{{ site.data.sitewide.company_email }}">
+    <input type="hidden" name="redirectTo" value="{{ site.data.sitewide.site_url }}">
+
     <div class="space-y-4">
 
       <div>
@@ -31,6 +33,8 @@
       </div>
 
       <button class="block w-full text-center rounded-md bg-blue-700 px-3.5 py-2.5 font-bold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700" type="Submit">Send</button>
+
+      <input type="text" name="honeypot" style="display:none">
 
     </div>
   </form>
