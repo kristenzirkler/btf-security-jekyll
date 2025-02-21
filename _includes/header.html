@@ -2,18 +2,15 @@
 <header class="bg-black"
   x-data="{ isSolutionsNavOpen: false }">
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8 relative" aria-label="Global">
-    <div class="absolute top-0 left-4 w-24 md:w-32 lg:w-40 z-20 bg-black px-1 py-2 rounded-xl overflow-hidden">
+    <div class="absolute top-0 left-4 w-36 md:w-48 z-20 bg-black px-1 py-2 rounded-xl overflow-hidden">
       <a href="{{ site.baseurl }}/" class="text-center">
         <span class="sr-only">{{ site.data.sitewide.title }}</span>
-        <span class="">{% include logo.html class="m-auto w-16 md:w-20 lg:w-24" %}</span>
+        <span class="">{% include logo.html class="m-auto w-44" %}</span>
       </a>
     </div>
     <div class="flex lg:flex-1">
       <a href="{{ site.baseurl }}/" class="-m-1.5 p-1.5 pl-4">
         <span class="sr-only">{{ site.data.sitewide.title }}</span>
-        <span class="visually-hidden">
-          {% include logo.html class="w-24 md:w-32 lg:w-40 h-0" %}
-        </span>
       </a>
     </div>
     <div class="flex lg:hidden">

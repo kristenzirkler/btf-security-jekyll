@@ -1,6 +1,5 @@
-url: 'https://kristenzirkler.github.io'
-baseurl: '/btf-security-jekyll'
-title: 'BTF Security'
+baseurl: 'https://www.btfsecurityconsultants.com'
+title: 'BTF Security Consultants'
 livereload: true
 
 plugins:
