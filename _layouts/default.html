@@ -6,8 +6,11 @@
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.data.sitewide.title }}</title>
     <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.data.sitewide.description }}{% endif %}"/>
 
+    {% if site.baseurl == '' %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    {% else %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main-compiled.css">
+    {% endif %}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
