@@ -727,6 +727,9 @@ video {
 .w-8 {
   width: 2rem;
 }
+.w-\[290px\] {
+  width: 290px;
+}
 .w-\[36\.125rem\] {
   width: 36.125rem;
 }
@@ -741,6 +744,9 @@ video {
 }
 .max-w-2xl {
   max-width: 42rem;
+}
+.max-w-3xl {
+  max-width: 48rem;
 }
 .max-w-4xl {
   max-width: 56rem;
@@ -1394,6 +1400,10 @@ video {
 
   .md\:w-52 {
     width: 13rem;
+  }
+
+  .md\:w-\[290px\] {
+    width: 290px;
   }
 
   .md\:text-6xl {
