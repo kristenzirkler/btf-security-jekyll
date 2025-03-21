@@ -15,7 +15,10 @@ If classes are added to local, copy \_site/assets/css/main.css to /assets/css/ma
 ## To Work on Site Locally
 
 * in terminal, navigate to the repo directory.
-* bundle exec jekyll serve --watch --baseurl='' (the baseurl option is empty on purpose)
+```
+bundle exec jekyll serve --watch --baseurl=''
+```
+(the baseurl option is empty on purpose)
 * open browser and go to http://localhost:4000/
 
 ## Other Tips
