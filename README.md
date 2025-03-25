@@ -4,8 +4,13 @@
 
 ## NOTE:
 ## NOTE:
+
+
+
 ## NOTE: Tailwind does not automatically compile to Github Pages. 
 If classes are added to local, copy \_site/assets/css/main.css to /assets/css/main-compiled.css
+
+
 
 ## NOTE:
 ## NOTE:
@@ -18,6 +23,8 @@ If classes are added to local, copy \_site/assets/css/main.css to /assets/css/ma
 ```
 bundle exec jekyll serve --watch --baseurl=''
 ```
+^^^ did you update the css
+
 (the baseurl option is empty on purpose)
 * open browser and go to http://localhost:4000/
 
